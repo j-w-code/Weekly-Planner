@@ -4,6 +4,8 @@ import DayColumn from './DayColumn';
 import EventDetailsModal from './EventDetailsModal';
 import AddEventForm from './AddEventForm';
 import SequenceManager from './SequenceManager';
+import KeyboardShortcutsHelp from './KeyboardShortcutsHelp';
+import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
 import { APP_CONFIG } from '../config';
 import './WeeklyPlanner.css';
 
@@ -14,6 +16,7 @@ function WeeklyPlanner() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showAddEvent, setShowAddEvent] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
+  const [showShortcutsHelp, setShowShortcutsHelp] = useState(false);
 
   // Memoize week calculations
   const weekStart = useMemo(
@@ -124,6 +127,21 @@ function WeeklyPlanner() {
     }
   }, [fetchEvents]);
 
+  // Keyboard shortcuts
+  useKeyboardShortcuts({
+    'arrowleft': handlePreviousWeek,
+    'arrowright': handleNextWeek,
+    't': handleToday,
+    'n': () => handleAddEventClick(new Date()),
+    'escape': () => {
+      setShowAddEvent(false);
+      setSelectedEvent(null);
+      setShowShortcutsHelp(false);
+    },
+    '?': () => setShowShortcutsHelp(true),
+    'shift+/': () => setShowShortcutsHelp(true),
+  });
+
   return (
     <div className="weekly-planner" role="main">
       <SequenceManager weekStart={weekStart} weekDays={weekDays} />
@@ -164,6 +182,15 @@ function WeeklyPlanner() {
         >
           + Add Event
         </button>
+        <button 
+          onClick={() => setShowShortcutsHelp(true)} 
+          className="shortcuts-button"
+          aria-label="Show keyboard shortcuts"
+          type="button"
+          title="Keyboard shortcuts (?)"
+        >
+          ⌨️
+        </button>
       </nav>
 
       {loading ? (
@@ -202,6 +229,9 @@ function WeeklyPlanner() {
           onAddEvent={handleAddEvent}
           selectedDate={selectedDate}
         />
+      )}
+      {showShortcutsHelp && (
+        <KeyboardShortcutsHelp onClose={() => setShowShortcutsHelp(false)} />
       )}
     </div>
   );

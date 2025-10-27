@@ -1,6 +1,20 @@
 /**
  * Application Constants
  * Central location for all magic numbers and configuration values
+ * 
+ * NOTE: This file is currently unused but is kept for future feature implementations.
+ * Many constants here are prepared for upcoming features like:
+ * - Form validation (EVENT_CONSTRAINTS, VALIDATION_MESSAGES)
+ * - Enhanced notifications (NOTIFICATION_OPTIONS)
+ * - Event color coding (EVENT_COLORS)
+ * - Feature flags for gradual rollout (FEATURE_FLAGS)
+ * - Date formatting consistency (DATE_FORMATS)
+ * 
+ * When implementing new features, import constants from here to maintain
+ * consistency and avoid magic numbers throughout the codebase.
+ * 
+ * Example usage:
+ * import { UI_MESSAGES, EVENT_CONSTRAINTS } from './constants';
  */
 
 // Event Constraints

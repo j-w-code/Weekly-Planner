@@ -23,13 +23,14 @@
 
 .modal-content {
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   max-width: 600px;
   width: 90%;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
   animation: slideUp 0.3s ease-out;
+  margin: 20px;
 }
 
 @keyframes slideUp {
@@ -47,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 24px 28px;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -78,7 +79,7 @@
 }
 
 .modal-body {
-  padding: 20px;
+  padding: 28px;
 }
 
 .event-detail {
@@ -120,11 +121,11 @@
 }
 
 .modal-footer {
-  padding: 20px;
+  padding: 20px 28px 24px;
   border-top: 1px solid #e0e0e0;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
 }
 
 .delete-button {
@@ -155,4 +156,36 @@
 
 .cancel-button:hover {
   background-color: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  
+  .modal-header {
+    padding: 20px;
+  }
+  
+  .modal-header h2 {
+    font-size: 20px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-footer {
+    padding: 16px 20px 20px;
+    flex-direction: column-reverse;
+  }
+  
+  .delete-button,
+  .cancel-button {
+    width: 100%;
+  }
 }

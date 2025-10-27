@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import SequenceCard from './SequenceCard';
 import AddSequenceForm from './AddSequenceForm';
 import EditSequenceForm from './EditSequenceForm';
+import { useKeyboardShortcut } from '../hooks/useKeyboardShortcuts';
 import {
   createSequence,
   toggleDayCompletion,
@@ -99,6 +100,9 @@ function SequenceManager({ weekStart, weekDays }) {
     );
     setEditingSequence(null);
   }, []);
+
+  // Keyboard shortcut for new sequence
+  useKeyboardShortcut('s', () => setShowAddForm(true), !showAddForm && !editingSequence);
 
   return (
     <div className="sequence-manager">

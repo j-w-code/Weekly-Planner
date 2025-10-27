@@ -78,6 +78,29 @@
   transform: translateY(-1px);
 }
 
+.shortcuts-button {
+  background: #f8f9fa;
+  color: #5f6368;
+  border: 1px solid #dadce0;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.shortcuts-button:hover {
+  background: white;
+  border-color: #5f6368;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.shortcuts-button:active {
+  transform: translateY(0);
+}
+
 .week-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);

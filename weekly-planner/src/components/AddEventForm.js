@@ -206,16 +206,16 @@ function AddEventForm({ onClose, onAddEvent, selectedDate }) {
           </button>
         </div>
         <form onSubmit={handleSubmit} aria-label="Add new calendar event">
-          {validationError && (
-            <div 
-              className="validation-error" 
-              role="alert" 
-              aria-live="assertive"
-            >
-              ⚠️ {validationError}
-            </div>
-          )}
           <div className="modal-body">
+            {validationError && (
+              <div 
+                className="validation-error" 
+                role="alert" 
+                aria-live="assertive"
+              >
+                ⚠️ {validationError}
+              </div>
+            )}
             {isPastEvent && (
               <div className="past-event-warning" role="alert" aria-live="polite">
                 You are creating an event in the past. It will be marked as completed.

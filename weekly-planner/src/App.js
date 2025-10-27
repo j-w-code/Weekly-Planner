@@ -3,6 +3,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import WeeklyPlanner from './components/WeeklyPlanner';
 import LoginButton from './components/LoginButton';
 import ErrorBoundary from './components/ErrorBoundary';
+import PWAInstallPrompt from './components/PWAInstallPrompt';
 import { GOOGLE_CLIENT_ID, GOOGLE_API_KEY, DISCOVERY_DOC, CALENDAR_SCOPES, validateConfig } from './config';
 import './App.css';
 
@@ -110,6 +111,7 @@ function App() {
               <WeeklyPlanner />
             )}
           </main>
+          <PWAInstallPrompt />
         </div>
       </GoogleOAuthProvider>
     </ErrorBoundary>

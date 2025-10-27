@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Weekly Planner",
+  "name": "Weekly Planner - Google Calendar & Sequences",
+  "description": "Organize your week with Google Calendar integration and custom sequence tracking for goals and habits",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,24 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "any",
+  "theme_color": "#4285f4",
+  "background_color": "#ffffff",
+  "categories": ["productivity", "lifestyle", "utilities"],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
 }

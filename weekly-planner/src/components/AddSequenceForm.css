@@ -4,6 +4,10 @@
   overflow-y: auto;
 }
 
+.sequence-form form {
+  padding: 24px;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -237,7 +241,13 @@
 @media (max-width: 768px) {
   .sequence-form {
     max-width: 100%;
-    width: 100%;
+    width: 95%;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  
+  .sequence-form form {
+    padding: 20px;
   }
 
   .day-selector {

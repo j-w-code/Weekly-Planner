@@ -1,0 +1,124 @@
+.shortcuts-modal {
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.shortcuts-content {
+  padding: 8px 28px 24px;
+}
+
+.shortcuts-section {
+  margin-bottom: 32px;
+}
+
+.shortcuts-section:last-child {
+  margin-bottom: 0;
+}
+
+.shortcuts-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  border-bottom: 2px solid #e8eaed;
+  padding-bottom: 8px;
+}
+
+.shortcuts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shortcut-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.shortcut-item kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  padding: 6px 12px;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e8eaed 100%);
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 
+              inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.shortcut-item span {
+  flex: 1;
+  font-size: 14px;
+  color: #5f6368;
+  line-height: 1.5;
+}
+
+.shortcuts-footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 2px solid #e8eaed;
+  text-align: center;
+}
+
+.shortcuts-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #5f6368;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.shortcuts-footer kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  padding: 4px 8px;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e8eaed 100%);
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shortcuts-modal {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .shortcuts-section h3 {
+    font-size: 16px;
+  }
+
+  .shortcut-item {
+    gap: 12px;
+  }
+
+  .shortcut-item kbd {
+    min-width: 40px;
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .shortcut-item span {
+    font-size: 13px;
+  }
+}
