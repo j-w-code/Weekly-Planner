@@ -1,0 +1,121 @@
+.event-card {
+  /* Reset button styles */
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  padding: 0;
+  
+  background-color: #f8f9ff;
+  border-left: 4px solid #4285f4;
+  border-radius: 6px;
+  padding: 0.75rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-time {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.event-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.event-location {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.event-description {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  max-height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Past event styling */
+.event-card.past-event {
+  background-color: #f5f5f5;
+  opacity: 0.75;
+  border-left-color: #999;
+}
+
+.event-card.past-event .event-title,
+.event-card.past-event .event-time,
+.event-card.past-event .event-location,
+.event-card.past-event .event-description {
+  color: #888;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #aaa;
+}
+
+.event-card.past-event .event-title {
+  font-weight: 500;
+}
+
+/* Today's event styling */
+.event-card.today-event {
+  background-color: #fff8e1;
+  border-left-color: #ffa726;
+}
+
+/* Past event indicator */
+.past-indicator {
+  color: #4caf50;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+/* Status badge */
+.event-status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #4caf50;
+  background-color: #e8f5e9;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-top: 0.25rem;
+  text-decoration: none !important;
+}
+
+/* Calendar color variations */
+.event-card {
+  --color-1: #a4bdfc;
+  --color-2: #7ae7bf;
+  --color-3: #dbadff;
+  --color-4: #ff887c;
+  --color-5: #fbd75b;
+  --color-6: #ffb878;
+  --color-7: #46d6db;
+  --color-8: #e1e1e1;
+  --color-9: #5484ed;
+  --color-10: #51b749;
+  --color-11: #dc2127;
+}

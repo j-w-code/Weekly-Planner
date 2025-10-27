@@ -1,0 +1,56 @@
+SAVINGS GOAL TRACKING SYSTEM - FLOWCHART
+=========================================
+
+START
+  |
+  v
+┌─────────────────┐
+│   User Login    │
+└─────────────────┘
+  |
+  v
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│  Create Goal?   │────▶│   Enter Goal     │────▶│   Save Goal     │
+│   (Yes/No)      │     │ (Name, Amount,   │     │ to Database     │
+└─────────────────┘     │  Target Date)    │     └─────────────────┘
+  | No                  └──────────────────┘           |
+  v                                                     v
+┌─────────────────┐                               ┌─────────────────┐
+│  View Existing  │◄──────────────────────────────│   Goal Created  │
+│     Goals       │                               │   Successfully  │
+└─────────────────┘                               └─────────────────┘
+  |
+  v
+┌─────────────────┐     ┌──────────────────┐
+│  Add Money to   │────▶│  Update Progress │
+│     Goal?       │     │   Percentage     │
+│   (Yes/No)      │     └──────────────────┘
+└─────────────────┘           |
+  | No                        v
+  v                     ┌─────────────────┐
+┌─────────────────┐     │  Goal Reached?  │
+│ Check Notifications │ │   (Yes/No)      │
+└─────────────────┘     └─────────────────┘
+  |                           | Yes
+  v                           v
+┌─────────────────┐     ┌─────────────────┐
+│ Date Approaching│     │ Success Message │
+│ & Goal Not Met? │     │ & Goal Complete │
+│   (Yes/No)      │     └─────────────────┘
+└─────────────────┘           |
+  | Yes                       v
+  v                         END
+┌─────────────────┐
+│ Send Warning    │
+│  Notification   │
+└─────────────────┘
+  |
+  v
+END
+
+SIMPLIFIED USER ACTIONS:
+1. Create Goal (Name, Amount, Date)
+2. Add Money to Goal
+3. View Progress
+4. Receive Notifications
+5. Complete Goal

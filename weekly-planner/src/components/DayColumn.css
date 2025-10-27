@@ -1,0 +1,122 @@
+.day-column {
+  background-color: white;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-column.today {
+  background-color: #f0f4ff;
+}
+
+/* Past date styling */
+.day-column.past-date {
+  background-color: #f5f5f5;
+  opacity: 0.85;
+}
+
+.day-column.past-date .day-header {
+  background-color: #e8e8e8;
+  border-bottom-color: #bbb;
+}
+
+.day-column.past-date .day-name,
+.day-column.past-date .day-number {
+  color: #888;
+}
+
+.day-column.past-date .no-events {
+  color: #aaa;
+}
+
+/* Future date styling */
+.day-column.status-future {
+  background-color: white;
+}
+
+.day-column.status-future .day-header {
+  background-color: #fafafa;
+}
+
+.day-header {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+  background-color: #fafafa;
+  position: relative;
+}
+
+.day-column.today .day-header {
+  background-color: #e8f0ff;
+  border-bottom-color: #667eea;
+}
+
+.day-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #666;
+  letter-spacing: 0.5px;
+}
+
+.day-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 0.25rem;
+}
+
+.today-number {
+  color: #667eea;
+  background-color: #667eea;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.events-container {
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.no-events {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  padding: 2rem 1rem;
+  font-style: italic;
+}
+
+.day-add-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.day-add-button:hover {
+  background-color: #5568d3;
+  transform: scale(1.1);
+}
