@@ -19,9 +19,9 @@
 - **Redirect URIs:** http://localhost:3000
 
 ### API Key
-- **Key:** `AIzaSyADt3mh905po1LySFmo_PyXrszGCfVAJoA`
-- **Status:** ✓ Verified (can access Calendar API discovery document)
-- **Restrictions:** Google Calendar API
+- **Key:** `[REMOVED - Use .env.local or src/config.js]`
+- **Status:** ⚠️ Key exposed and revoked - Generate new key
+- **Restrictions:** Google Calendar API (configure in Google Cloud Console)
 
 ## Configuration Files
 
